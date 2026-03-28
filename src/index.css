@@ -7,6 +7,7 @@
   html {
     scroll-behavior: smooth;
   }
+
   body {
     @apply bg-gray-light text-primary font-sans antialiased;
   }
@@ -20,9 +21,15 @@
 
 /* Ticker animation */
 @keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
+
 .ticker-track {
   display: flex;
   width: max-content;
@@ -31,23 +38,43 @@
 
 /* Vertical Ticker animation */
 @keyframes ticker-vertical {
-  0% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
 }
 
 /* Image reveal on mount */
 @keyframes image-reveal {
-  0% { transform: scale(1.12); filter: brightness(0.8) blur(2px); }
-  100% { transform: scale(1); filter: brightness(1) blur(0); }
+  0% {
+    transform: scale(1.12);
+    filter: brightness(0.8) blur(2px);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1) blur(0);
+  }
 }
+
 .animate-image-reveal {
   animation: image-reveal 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Right-to-Left Reveal */
 @keyframes reveal-rl {
-  0% { clip-path: inset(0 0 0 100%); transform: scale(1.05); filter: brightness(0.8); }
-  100% { clip-path: inset(0 0 0 0); transform: scale(1); filter: brightness(1); }
+  0% {
+    clip-path: inset(0 0 0 100%);
+    transform: scale(1.05);
+    filter: brightness(0.8);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+    filter: brightness(1);
+  }
 }
+
 .animate-reveal-rl {
   animation: reveal-rl 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -56,4 +83,22 @@
 .writing-vertical {
   writing-mode: vertical-rl;
   text-orientation: mixed;
+}
+
+.footer-follow {
+  margin-top: 15px;
+}
+
+.footer-follow h4 {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  font-size: 20px;
+  color: #0a66c2;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: #ffffff;
 }
