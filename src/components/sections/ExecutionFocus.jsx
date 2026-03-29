@@ -1,37 +1,190 @@
 import { FadeIn } from '../ui/FadeIn';
+import { useEffect, useRef } from 'react';
 
-const WORDS = ['EXECUTION FOCUS', 'MARKET ACCESS', 'STRATEGIC SOURCING', 'GLOBAL SUPPLY'];
+// Words to cycle through in the vertical ticker
+const WORDS = [
+  '• SOURCING ',
+  '• MARKET ACCESS ',
+  '• PROCUREMENT ',
+  '• EXECUTION ',
+  '• GLOBAL SUPPLY ',
+  '• STRATEGIC ',
+  '• MARKET ACCESS ',
+  '• SOURCING ',
+  '• EXECUTION ',
+  '• PROCUREMENT ',
+];
+
+function VerticalTicker() {
+  const wrapperRef = useRef(null);
+  const posRef = useRef(0);
+  const rafRef = useRef(null);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+
+    const speed = 1; // px per frame
+
+    const animate = () => {
+      posRef.current -= speed;
+      // get height of first child (the primary list)
+      const firstChild = wrapper.children[0];
+      const listH = firstChild ? firstChild.offsetHeight : 0;
+
+      if (listH > 0 && Math.abs(posRef.current) >= listH) {
+        posRef.current = 0;
+      }
+
+      wrapper.style.transform = `translateY(${posRef.current}px)`;
+      rafRef.current = requestAnimationFrame(animate);
+    };
+
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, []);
+
+  const wordList = (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      {WORDS.map((word, i) => (
+        <span
+          key={i}
+          className="select-none text-white font-black uppercase"
+          style={{
+            writingMode: 'vertical-lr',
+            textOrientation: 'mixed',
+            fontSize: 'clamp(2.5rem, 3vw, 3.4rem)',
+            letterSpacing: '-0.02em',
+            lineHeight: 1,
+            padding: '0.2em 0',
+            transform: 'rotate(180deg)',
+            display: 'block',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {word}
+        </span>
+      ))}
+    </div>
+  );
+
+  return (
+    // outer clip container
+    <div
+      style={{
+        position: 'absolute',
+        top: 0,
+        right: 300,
+        bottom: 0,
+        width: '130px',
+        overflow: 'hidden',
+      }}
+      aria-hidden="true"
+    >
+      {/* moving wrapper — contains two copies for seamless loop */}
+      <div
+        ref={wrapperRef}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          willChange: 'transform',
+        }}
+      >
+        {wordList}
+        {/* duplicate for seamless loop */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          {WORDS.map((word, i) => (
+            <span
+              key={i}
+              className="select-none text-white font-black uppercase"
+              style={{
+                writingMode: 'vertical-lr',
+                textOrientation: 'mixed',
+                fontSize: 'clamp(2.5rem, 3vw, 3.4rem)',
+                letterSpacing: '-0.02em',
+                lineHeight: 1,
+                padding: '0.2em 0',
+                transform: 'rotate(180deg)',
+                display: 'block',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {word}
+            </span>
+          ))}
+        </div> */
+      </div>
+    </div>
+  );
+}
 
 export default function ExecutionFocus() {
   return (
-    <section className="w-full flex flex-col lg:flex-row min-h-[500px] lg:min-h-[70vh] overflow-hidden">
-
-      {/* Left Dark Section */}
-      <div className="w-full lg:w-[30%] bg-[#0F1113] p-10 md:p-14 lg:p-20 flex flex-col justify-center relative z-20 shrink-0">
+    <section
+      style={{
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        minHeight: '100vh',
+        overflow: 'hidden',
+      }}
+    >
+      {/* ── LEFT: dark text panel ── */}
+      <div
+        style={{
+          width: '28%',
+          minWidth: '260px',
+          background: '#0F1113',
+          padding: '5rem 3.5rem',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          position: 'relative',
+          zIndex: 20,
+          flexShrink: 0,
+        }}
+      >
         <FadeIn>
-          <h2 className="text-5xl md:text-[56px] lg:text-[64px] font-black text-[#F7F7F6] tracking-tight leading-[1.05] mb-8">
+          <h2
+            style={{
+              fontFamily: 'inherit',
+              fontWeight: 900,
+              color: '#F7F7F6',
+              lineHeight: 1.02,
+              letterSpacing: '-0.03em',
+              marginBottom: '2rem',
+              fontSize: 'clamp(2rem, 2.5vw, 3rem)',
+            }}
+          >
             Execution<br />Focus
           </h2>
-          <p className="text-[16px] leading-relaxed text-[#6B7280] max-w-[320px]">
-            Eurocore Global delivers on-the-ground support to ensure seamless international procurement. We don't just advise; we execute supply chain solutions that drive real business outcomes.
+          <p
+            style={{
+              fontSize: '0.95rem',
+              lineHeight: 1.7,
+              color: '#9CA3AF',
+              maxWidth: '270px',
+            }}
+          >
+            Eurocore Global delivers on-the-ground support to ensure seamless
+            international procurement. We don't just advise; we execute supply
+            chain solutions that drive real business outcomes.
           </p>
         </FadeIn>
       </div>
 
-      {/* Right Blue Section */}
-      <div className="w-full lg:w-[70%] bg-[#2563EB] min-h-[400px] relative overflow-hidden flex-grow flex items-center">
-        {/* Horizontal Scrolling Text */}
-        <div className="absolute inset-y-0 left-0 right-0 pointer-events-none flex items-center overflow-hidden w-full">
-          <div className="ticker-track">
-            {[...WORDS, ...WORDS, ...WORDS, ...WORDS, ...WORDS, ...WORDS].map((w, i) => (
-              <span key={i} className="text-[26px] lg:text-[40px] font-black tracking-tighter text-[#F7F7F6]/30 uppercase mx-8 inline-block leading-none select-none">
-                {w}
-              </span>
-            ))}
-          </div>
-        </div>
+      {/* ── RIGHT: blue panel with vertical scrolling text ── */}
+      <div
+        style={{
+          flex: 1,
+          background: '#4067a4ff',
+          position: 'relative',
+          overflow: 'hidden',
+          minHeight: '500px',
+        }}
+      >
+        <VerticalTicker />
       </div>
-
     </section>
   );
 }
