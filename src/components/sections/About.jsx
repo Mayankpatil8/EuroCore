@@ -40,8 +40,8 @@ export default function About() {
           <FadeIn>
             <div className="text-center mb-20">
               <p className="text-xs font-bold tracking-widest text-[#2563EB] uppercase mb-4">OUR VALUES</p>
-              <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-primary tracking-tight">
-                The Foundation of Execution
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight">
+                Core Values & Strategy
               </h2>
             </div>
           </FadeIn>
@@ -85,6 +85,103 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Third Section: What Clients Value */}
+      <section className="py-24 bg-[#0F1113] text-white">
+        <div className="max-w-container mx-auto px-6 md:px-10">
+          <div className="text-center mb-20">
+            <FadeIn>
+              <p className="text-xs font-bold tracking-widest text-[#2563EB] uppercase mb-4">RELATIONSHIP FIRST</p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8">
+                What our clients value
+              </h2>
+              <div className="w-16 h-1 bg-[#2563EB] mx-auto" />
+            </FadeIn>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+            {[
+              {
+                title: "Access to trusted suppliers",
+                desc: "Leveraging a global network of proven partners to ensure reliability and quality in every transaction.",
+                icon: <IconSuppliers />
+              },
+              {
+                title: "Speed when it matters",
+                desc: "Acting with precision and urgency when supply constraints or shifting markets require rapid response.",
+                icon: <IconSpeed />
+              },
+              {
+                title: "Global market mobility",
+                desc: "The ability to operate across diverse markets and jurisdictions with full legal and operational compliance.",
+                icon: <IconMarkets />
+              },
+              {
+                title: "End-to-end ownership",
+                desc: "True accountability from the initial sourcing request to final delivery on the ground.",
+                icon: <IconOwnership />
+              }
+            ].map((item, idx) => (
+              <FadeIn key={idx} delay={idx * 100}>
+
+                {/* CARD */}
+                <div className="group h-full flex flex-col justify-between bg-white/5 border border-white/10 rounded-xl p-6 md:p-7 transition-all duration-300 hover:bg-white/10 hover:border-[#2563EB]/40 hover:shadow-lg">
+
+                  {/* Top Content */}
+                  <div>
+                    <div className="mb-5 text-[#2563EB] transform transition-transform duration-300 group-hover:scale-110">
+                      {item.icon}
+                    </div>
+
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 text-white">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-[#9CA3AF] text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                </div>
+
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fourth Section: Trust & Confidentiality */}
+      <section className="relative py-16 md:py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <FadeIn>
+            <div className="mx-auto max-w-2xl border-t-4 border-[#2563EB] bg-white p-6 md:p-8 shadow-lg rounded-xl">
+              {/* Icon */}
+              <div className="mb-6 text-[#2563EB] flex justify-center">
+                <IconSecurity size={60} />
+              </div>
+
+              {/* Heading */}
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#0F1113] tracking-tight mb-6 flex justify-center">
+                Trust and Confidentiality
+              </h2>
+
+              {/* Content */}
+              <div className="space-y-4 max-w-xl ">
+                <p className="text-[#0F1113] text-lg font-semibold leading-relaxed">
+                  We operate with strict confidentiality as the foundation of our client Relationships.
+                </p>
+
+                <div className="w-10 h-[2px] bg-[#2563EB]/50 mx-auto" />
+
+                <p className="text-[#2D333D] text-[15px] md:text-[16px] font-medium leading-relaxed">
+                  Projects, Partners, and Transactions are shared only when necessary and under appropriate structures to protect the integrity of the mission and our partner's interests.
+                </p>
+              </div>
+
+            </div>
+          </FadeIn>
+        </div>
+      </section>
     </div>
   );
 }
@@ -93,8 +190,8 @@ export default function About() {
 function IconBuilding() {
   return (
     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="4" y="10" width="16" height="12" rx="0" ry="0"/>
-      <rect x="8" y="2" width="8" height="8" rx="0" ry="0"/>
+      <rect x="4" y="10" width="16" height="12" rx="0" ry="0" />
+      <rect x="8" y="2" width="8" height="8" rx="0" ry="0" />
       <path d="M10 6h4" />
       <path d="M12 10v12" />
       <path d="M6 14h2" />
@@ -119,9 +216,56 @@ function IconPersonDesk() {
 function IconGlobe() {
   return (
     <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10"/>
-      <line x1="2" y1="12" x2="22" y2="12"/>
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      <circle cx="12" cy="12" r="10" />
+      <line x1="2" y1="12" x2="22" y2="12" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+  );
+}
+
+function IconMarkets() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
+
+function IconSuppliers() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  );
+}
+
+function IconOwnership() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="22 11.08 22 12 12 22 7 17" />
+      <path d="M12 22v-5" />
+      <circle cx="12" cy="12" r="10" />
+    </svg>
+  );
+}
+
+function IconSpeed() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+    </svg>
+  );
+}
+
+function IconSecurity({ size = 34 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
     </svg>
   );
 }
