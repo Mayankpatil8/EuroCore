@@ -5,7 +5,7 @@ import CallToAction from '../components/sections/CallToAction';
 
 export default function Home() {
   return (
-    <div className="bg-[#b0b4b8] min-h-screen">
+    <div className="bg-[#0A1F3C] min-h-screen text-white">
       <Hero />
       <CompanyOverview />
       <ExecutionFocus />

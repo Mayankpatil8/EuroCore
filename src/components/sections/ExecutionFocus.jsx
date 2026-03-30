@@ -74,9 +74,9 @@ function VerticalTicker() {
       style={{
         position: 'absolute',
         top: 0,
-        right: 300,
+        right: window.innerWidth < 768 ? 10 : 300,
+        width: window.innerWidth < 768 ? '70px' : '130px',
         bottom: 0,
-        width: '130px',
         overflow: 'hidden',
       }}
       aria-hidden="true"
@@ -124,7 +124,7 @@ export default function ExecutionFocus() {
       style={{
         width: '100%',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: window.innerWidth < 768 ? 'column' : 'row',
         minHeight: '100vh',
         overflow: 'hidden',
       }}
@@ -132,10 +132,10 @@ export default function ExecutionFocus() {
       {/* ── LEFT: dark text panel ── */}
       <div
         style={{
-          width: '28%',
-          minWidth: '260px',
+          width: window.innerWidth < 768 ? '100%' : '28%',
+          minWidth: window.innerWidth < 768 ? '100%' : '260px',
           background: '#0F1113',
-          padding: '5rem 3.5rem',
+          padding: window.innerWidth < 768 ? '3rem 1.5rem' : '5rem 3.5rem',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -180,7 +180,7 @@ export default function ExecutionFocus() {
           background: '#4067a4ff',
           position: 'relative',
           overflow: 'hidden',
-          minHeight: '500px',
+          minHeight: window.innerWidth < 768 ? '250px' : '500px',
         }}
       >
         <VerticalTicker />
