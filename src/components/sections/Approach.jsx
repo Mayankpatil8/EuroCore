@@ -45,19 +45,19 @@ export default function Approach() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mt-10">
           {STEPS.map((step, i) => (
             <FadeIn key={i} delay={i * 100}>
-              <div className="flex flex-col group cursor-default p-5 sm:p-6 md:p-8 rounded-xl hover:bg-white hover:shadow-[0_20px_40px_rgba(15,17,19,0.06)] transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-[#0F1113]/5 relative overflow-hidden">
+              <div className="flex flex-col group cursor-default p-5 sm:p-6 md:p-8 rounded-xl hover:bg-white hover:shadow-[0_20px_40px_rgba(15,17,19,0.06)] transition-all duration-700 hover:-translate-y-1 border border-transparent hover:border-[#0F1113]/5 relative overflow-hidden">
 
                 {/* Glow on hover */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#2563EB] opacity-0 group-hover:opacity-[0.03] blur-[40px] transition-opacity duration-700 pointer-events-none rounded-full transform translate-x-1/2 -translate-y-1/2" />
 
-                <div className="text-[50px] sm:text-[70px] md:text-[80px] leading-none font-bold text-[#0F1113]/10 mb-4 tracking-tighter group-hover:text-[#2563EB]/20 transition-colors duration-500">
+                <div className="text-[50px] sm:text-[70px] md:text-[80px] leading-none font-bold text-[#0F1113]/10 mb-4 tracking-tighter group-hover:text-[#2563EB]/20 transition-colors duration-700">
                   {step.num}
                 </div>
 
                 {/* Animated Horizontal line */}
                 <div className="w-full h-[2px] mb-6 bg-[#0F1113]/10 relative overflow-hidden rounded-full">
                   <div
-                    className={`absolute inset-y-0 left-0 bg-[#2563EB] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${i === 0 ? 'w-full' : 'w-0 group-hover:w-full'}`}
+                    className={`absolute inset-y-0 left-0 bg-[#2563EB] transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${i === 0 ? 'w-full' : 'w-0 group-hover:w-full'}`}
                   />
                 </div>
 
@@ -86,8 +86,7 @@ export default function Approach() {
           <div className="absolute inset-0 bg-[#0F1113]/55 mix-blend-multiply transition-colors duration-1000 " />
 
           {/* Pulsing Core Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] bg-[#2563EB]/25 rounded-full blur-[120px] mix-blend-screen animate-pulse pointer-events-none transition-all duration-[2000ms] ease-out" style={{ animationDuration: '4s' }} />
-        </div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] bg-[#2563EB]/10 rounded-full blur-[120px] opacity-40 pointer-events-none transition-all duration-[2000ms]" />        </div>
 
         {/* Text Content */}
         <div className="relative z-10 w-full px-6 max-w-container mx-auto flex flex-col items-center text-center">
