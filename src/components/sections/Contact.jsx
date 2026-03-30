@@ -155,7 +155,7 @@ export default function Contact() {
                 ].map((p, i) => (
                   <div key={i} className="pl-5 border-l-[3px] border-[#2563EB]">
                     <div className="font-bold text-[#0F1113] text-base leading-snug">{p.name}</div>
-                    <div className="text-[12px] font-bold tracking-[0.12em] uppercase text-[#0F1113]/80 mt-0.5 mb-2">
+                    <div className="text-[12px] font-bold tracking-[0.12em] text-[#0F1113]/80 mt-0.5 mb-2">
                       {p.role}
                     </div>
                     <a
@@ -199,7 +199,7 @@ function FloatingField({ id, name, label, type = 'text', required = false, value
         placeholder={label}
         className="peer w-full bg-transparent min-w-0 border-b border-white/15 text-white text-base py-2 focus:border-[#2563EB] focus:outline-none placeholder-transparent"
       />
-       <label
+      <label
         htmlFor={id}
         className="absolute left-0 top-0 text-[11px] font-bold tracking-[0.18em] uppercase text-[#9CA3AF] peer-placeholder-shown:top-7 peer-placeholder-shown:text-sm peer-placeholder-shown:text-white/60 peer-placeholder-shown:font-medium peer-placeholder-shown:tracking-normal peer-focus:top-0 peer-focus:text-[11px] peer-focus:text-[#2563EB] peer-focus:font-bold peer-focus:tracking-[0.18em] cursor-text"
       >
