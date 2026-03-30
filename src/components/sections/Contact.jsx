@@ -109,7 +109,7 @@ export default function Contact() {
                     <div className="pt-4">
                       <button
                         type="submit"
-                        className="w-full bg-[#2563EB] text-white text-sm font-bold tracking-[0.14em] uppercase py-4 md:py-5 hover:bg-[#1d4ed8] active:bg-[#1e40af] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/40 focus:ring-offset-2 focus:ring-offset-[#0F1113]"
+                        className="w-full bg-[#4067a4ff] text-white text-sm font-bold tracking-[0.14em] uppercase py-4 md:py-5 hover:bg-[#5085dcff] active:bg-[#1e40af] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/40 focus:ring-offset-2 focus:ring-offset-[#0F1113]"
                       >
                         Send Message
                       </button>
