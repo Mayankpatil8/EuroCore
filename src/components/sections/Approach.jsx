@@ -75,41 +75,40 @@ export default function Approach() {
       </div>
 
       {/* Hero Banner Section */}
-      <section className="relative overflow-hidden w-full flex flex-col items-center justify-center pt-32 pb-24 group cursor-default">
+      <section className="relative overflow-hidden w-full flex flex-col items-center justify-center pt-48 pb-32 cursor-default">
         {/* Background Overlay */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[#0F1113]">
-
+        <div className="absolute inset-0 bg-[#0B0D10]/40">
           <img
             src={steelBanner}
             alt="Steel framework"
-            className="w-full h-full object-cover grayscale opacity-60 animate-image-reveal origin-center mix-blend-luminosity transform scale-105 group-hover:scale-100 transition-transform duration-[2000ms] ease-out"
+            className="w-full h-full object-cover grayscale opacity-80 animate-image-reveal origin-center mix-blend-luminosity transform scale-105 transition-transform duration-[2000ms] ease-out"
           />
-          <div className="absolute inset-0 bg-[#0F1113]/80 mix-blend-multiply transition-colors duration-1000 group-hover:bg-[#0F1113]/70" />
+          <div className="absolute inset-0 bg-[#0F1113]/55 mix-blend-multiply transition-colors duration-1000 " />
 
           {/* Pulsing Core Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2563EB]/20 rounded-full blur-[120px] mix-blend-screen animate-pulse pointer-events-none group-hover:w-[800px] group-hover:h-[800px] group-hover:bg-[#2563EB]/30 transition-all duration-[2000ms] ease-out" style={{ animationDuration: '4s' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2563EB]/25 rounded-full blur-[120px] mix-blend-screen animate-pulse pointer-events-none transition-all duration-[2000ms] ease-out" style={{ animationDuration: '4s' }} />
         </div>
 
         {/* Text Content */}
         <div className="relative z-10 w-full px-6 max-w-container mx-auto flex flex-col items-center text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-[#F7F7F6] tracking-tight leading-tight mb-8 drop-shadow-lg">
+            <h2 className="text-4xl md:text-5xl lg:text-[68px] font-black text-[#F7F7F6] tracking-tighter leading-[1.1] mb-8 drop-shadow-2xl">
               Precision in Every Strategic Step
             </h2>
-            <p className="text-[16px] md:text-[17px] text-[#F7F7F6]/80 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+            <p className="text-[17px] md:text-[18px] text-[#F7F7F6] font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-xl opacity-90">
               Navigating the complexities of global procurement requires an execution-focused partner. We move with calm confidence to secure your supply chain and access new markets with unmatched reliability.
             </p>
 
             {/* Animated Underline */}
-            <div className="w-16 h-[2px] bg-[#2563EB] mx-auto mt-12 mb-20 group-hover:w-32 transition-all duration-700 ease-out shadow-[0_0_20px_rgba(37,99,235,0.6)]" />
+            <div className="mt-12 mb-20" />
           </FadeIn>
 
           {/* Glowing Ticker */}
-          <FadeIn delay={200} className="w-full overflow-hidden relative border-y border-[#2563EB]/10 py-6 bg-[#0F1113]/30 backdrop-blur-md">
+          <FadeIn delay={200} className="max-w-3xl mx-auto overflow-hidden relative border border-[#2563EB]/10 py-3 px-6 bg-[#0F1113]/40 backdrop-blur-sm rounded-full" style={{ maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)' }}>
             <div className="ticker-track">
               {[...WORDS, ...WORDS, ...WORDS, ...WORDS, ...WORDS].map((w, i) => (
-                <span key={i} className="text-sm md:text-base font-bold tracking-widest text-[#2563EB]/80 uppercase mx-8 whitespace-nowrap drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]">
-                  {w} •
+                <span key={i} className="text-sm md:text-[15px] font-black tracking-[0.25em] text-[#2563EB] uppercase mx-5 whitespace-nowrap drop-shadow-[0_0_12px_rgba(37,99,235,0.4)]">
+                  {w} <span className="mx-2 opacity-40">•</span>
                 </span>
               ))}
             </div>
