@@ -12,7 +12,7 @@ export default function CallToAction() {
           <p className="text-[17px] md:text-lg leading-relaxed text-[#6B7280] max-w-[700px] mx-auto font-medium mb-12">
             Partner with Eurocore Global for expert procurement execution and seamless access to international markets. Our team is ready to secure your supply requirements with precision.
           </p>
-          <Link to="/contact" className="inline-block bg-[#2563EB] text-[#F7F7F6] px-8 md:px-10 py-4 text-[15px] font-bold tracking-wide hover:bg-[#1d4ed8] transition-colors rounded-[2px] w-max">
+          <Link to="/contact" className="inline-block bg-[#426db3ff] text-[#F7F7F6] px-8 md:px-10 py-4 text-[15px] font-bold tracking-wide hover:bg-[#5085dcff] transition-colors rounded-[2px] w-max">
             Initiate Partnership
           </Link>
         </FadeIn>
