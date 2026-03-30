@@ -16,11 +16,14 @@ export default function Contact() {
         <FadeIn>
           <div className="mb-14 md:mb-20">
             <p className="text-[11px] font-bold tracking-[0.2em] text-[#2563EB] uppercase mb-4">
-              Get in Touch
+              Contact
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-[#0F1113] tracking-tight leading-[1.0] mb-6">
-              Contact Us
+              Let's talk
             </h1>
+            <p className="max-w-3xl text-[15px] md:text-[18px] text-[#4B5563] leading-relaxed mb-8">
+              If you are dealing with sourcing challenges, supply constraints or entering new markets, we can help.
+            </p>
             <div className="w-14 h-[3px] bg-[#2563EB]" />
           </div>
         </FadeIn>
@@ -58,7 +61,7 @@ export default function Contact() {
                       Message Received
                     </h3>
                     <p className="text-[#6B7280] text-base leading-relaxed max-w-sm">
-                      We have received your message. Our commercial team will review your requirements and respond shortly.
+                      We have received your message. We will respond quickly and define the next steps.
                     </p>
                   </div>
 
@@ -68,10 +71,10 @@ export default function Contact() {
 
                     <div className="mb-10 md:mb-12">
                       <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-2">
-                        Send a Message
+                        Contact Form
                       </h2>
                       <p className="text-[#6B7280] text-sm">
-                        Please provide your contact details and outline your requirement.
+                        Send a short description of your situation.
                       </p>
                     </div>
 
@@ -125,23 +128,41 @@ export default function Contact() {
           {/* ── RIGHT (col 8–12): info panel ── */}
           <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col gap-10 lg:pt-2">
 
-            <FadeIn delay={100}>
-              <p className="text-[15px] text-[#6B7280] leading-relaxed">
-                Provide a short outline of your sourcing or execution requirements.
-                Our procurement desk responds within one business day.
-              </p>
+    
+
+            <FadeIn delay={130}>
+              <div>
+                <p className="text-[11px] font-bold tracking-[0.2em] text-[#0F1113]/40 uppercase mb-4">
+                  How it starts
+                </p>
+                <ul className="space-y-3 text-[15px] text-[#4B5563] leading-relaxed">
+                  <li>Send a short description of your situation.</li>
+                  <li>We respond quickly and define the next steps.</li>
+                  <li>Use the contact form box to share your requirement.</li>
+                </ul>
+              </div>
             </FadeIn>
 
             {/* Direct Contacts */}
             <FadeIn delay={160}>
               <div>
                 <p className="text-[11px] font-bold tracking-[0.2em] text-[#0F1113]/40 uppercase mb-6">
-                  Direct Contacts
+                  Direct Contact
                 </p>
                 <div className="flex flex-col gap-7">
                   {[
-                    { name: 'Lotta Riekki', role: 'Managing Director', email: 'lotta@eurocoreglobal.com' },
-                    { name: 'Ajay Chaudhari', role: 'Commercial Director', email: 'sales@eurocoreglobal.com' },
+                    {
+                      name: 'Lotta Riekki',
+                      role: 'CEO, Commercial Strategy & Partnerships',
+                      email: 'lotta@eurocoreglobal.com',
+                      phone: '+358 40 8497183',
+                    },
+                    {
+                      name: 'Ajay Chaudhari',
+                      role: 'Co-Founder & Head of Global Sourcing',
+                      email: 'sales@eurocoreglobal.com',
+                      phone: '+358 40 8500302',
+                    },
                   ].map((p, i) => (
                     <div key={i} className="pl-5 border-l-[3px] border-[#2563EB]">
                       <div className="font-bold text-[#0F1113] text-base leading-snug">{p.name}</div>
@@ -154,9 +175,18 @@ export default function Contact() {
                       >
                         {p.email}
                       </a>
+                      <a
+                        href={`tel:${p.phone.replace(/\s+/g, '')}`}
+                        className="block mt-2 text-sm font-semibold text-[#0F1113] hover:text-[#2563EB] transition-colors"
+                      >
+                        {p.phone}
+                      </a>
                     </div>
                   ))}
                 </div>
+                <p className="text-[14px] text-[#4B5563] mt-8">
+                  Located in Helsinki, Finland
+                </p>
               </div>
             </FadeIn>
 
