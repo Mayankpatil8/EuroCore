@@ -33,7 +33,7 @@ export default function Approach() {
 
         {/* Header */}
         <FadeIn>
-          <p className="text-xs font-bold tracking-widest text-[#2563EB] uppercase mb-4">
+          <p className="text-xs font-bold tracking-widest text-[#3363b0ff] uppercase mb-4">
             OPERATIONAL FRAMEWORK
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0F1113] mb-10 sm:mb-14 md:mb-20 tracking-tight leading-none">
@@ -48,20 +48,20 @@ export default function Approach() {
               <div className="flex flex-col group cursor-default p-5 sm:p-6 md:p-8 rounded-xl hover:bg-white hover:shadow-[0_20px_40px_rgba(15,17,19,0.06)] transition-all duration-700 hover:-translate-y-1 border border-transparent hover:border-[#0F1113]/5 relative overflow-hidden">
 
                 {/* Glow on hover */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#2563EB] opacity-0 group-hover:opacity-[0.03] blur-[40px] transition-opacity duration-700 pointer-events-none rounded-full transform translate-x-1/2 -translate-y-1/2" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#3a63b0ff] opacity-0 group-hover:opacity-[0.03] blur-[40px] transition-opacity duration-700 pointer-events-none rounded-full transform translate-x-1/2 -translate-y-1/2" />
 
-                <div className="text-[50px] sm:text-[70px] md:text-[80px] leading-none font-bold text-[#0F1113]/10 mb-4 tracking-tighter group-hover:text-[#2563EB]/20 transition-colors duration-700">
+                <div className="text-[50px] sm:text-[70px] md:text-[80px] leading-none font-bold text-[#0F1113]/10 mb-4 tracking-tighter group-hover:text-[#3a63b0ff]/20 transition-colors duration-700">
                   {step.num}
                 </div>
 
                 {/* Animated Horizontal line */}
                 <div className="w-full h-[2px] mb-6 bg-[#0F1113]/10 relative overflow-hidden rounded-full">
                   <div
-                    className={`absolute inset-y-0 left-0 bg-[#2563EB] transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${i === 0 ? 'w-full' : 'w-0 group-hover:w-full'}`}
+                    className="absolute inset-y-0 left-0 bg-[#3a63b0ff] transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] w-0 group-hover:w-full"
                   />
                 </div>
 
-                <h3 className="text-sm font-bold uppercase tracking-wide text-[#2563EB] mb-3">
+                <h3 className="text-sm font-bold uppercase tracking-wide text-[#3a63b0ff] mb-3">
                   {step.label}
                 </h3>
 
@@ -86,7 +86,7 @@ export default function Approach() {
           <div className="absolute inset-0 bg-[#0F1113]/55 mix-blend-multiply transition-colors duration-1000 " />
 
           {/* Pulsing Core Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] bg-[#2563EB]/10 rounded-full blur-[120px] opacity-40 pointer-events-none transition-all duration-[2000ms]" />        </div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] bg-[#3a63b0ff]/10 rounded-full blur-[120px] opacity-40 pointer-events-none transition-all duration-[2000ms]" />        </div>
 
         {/* Text Content */}
         <div className="relative z-10 w-full px-6 max-w-container mx-auto flex flex-col items-center text-center">
@@ -103,10 +103,10 @@ export default function Approach() {
           </FadeIn>
 
           {/* Glowing Ticker */}
-          <FadeIn delay={200} className="max-w-3xl mx-auto overflow-hidden relative border border-[#2563EB]/10 py-3 px-6 bg-[#0F1113]/40 backdrop-blur-sm rounded-full" style={{ maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)' }}>
+          <FadeIn delay={200} className="max-w-3xl mx-auto overflow-hidden relative border border-[#3a63b0ff]/10 py-3 px-6 bg-[#0F1113]/40 backdrop-blur-sm rounded-full" style={{ maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)' }}>
             <div className="ticker-track">
               {[...WORDS, ...WORDS, ...WORDS, ...WORDS, ...WORDS].map((w, i) => (
-                <span key={i} className="text-xs sm:text-sm md:text-[15px] font-black tracking-[0.25em] text-[#2563EB] uppercase mx-5 whitespace-nowrap drop-shadow-[0_0_12px_rgba(37,99,235,0.4)]">
+                <span key={i} className="text-xs sm:text-sm md:text-[15px] font-black tracking-[0.25em] text-[#3a63b0ff] uppercase mx-5 whitespace-nowrap drop-shadow-[0_0_12px_rgba(37,99,235,0.4)]">
                   {w} <span className="mx-2 opacity-40">•</span>
                 </span>
               ))}

@@ -39,7 +39,7 @@ export default function About() {
         <div className="max-w-container mx-auto px-6 md:px-10">
           <FadeIn>
             <div className="text-center mb-20">
-              <p className="text-xs font-bold tracking-widest text-[#2563EB] uppercase mb-4">OUR VALUES</p>
+              <p className="text-xs font-bold tracking-widest text-[#4067a4ff] uppercase mb-4">OUR VALUES</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight">
                 Core Values & Strategy
               </h2>
@@ -91,11 +91,11 @@ export default function About() {
         <div className="max-w-container mx-auto px-6 md:px-10">
           <div className="text-center mb-20">
             <FadeIn>
-              <p className="text-xs font-bold tracking-widest text-[#2563EB] uppercase mb-4">RELATIONSHIP FIRST</p>
+              <p className="text-xs font-bold tracking-widest text-[#4067a4ff] uppercase mb-4">RELATIONSHIP FIRST</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8">
                 What our clients value
               </h2>
-              <div className="w-16 h-1 bg-[#2563EB] mx-auto" />
+              <div className="w-16 h-1 bg-[#4067a4ff] mx-auto" />
             </FadeIn>
           </div>
 
@@ -125,11 +125,11 @@ export default function About() {
               <FadeIn key={idx} delay={idx * 100}>
 
                 {/* CARD */}
-                <div className="group h-full flex flex-col justify-between bg-white/5 border border-white/10 rounded-xl p-6 md:p-7 transition-all duration-300 hover:bg-white/10 hover:border-[#2563EB]/40 hover:shadow-lg">
+                <div className="group h-full flex flex-col justify-between bg-white/5 border border-white/10 rounded-xl p-6 md:p-7 transition-all duration-300 hover:bg-white/10 hover:border-[#4067a4ff]/40 hover:shadow-lg">
 
                   {/* Top Content */}
                   <div>
-                    <div className="mb-5 text-[#2563EB] transform transition-transform duration-300 group-hover:scale-110">
+                    <div className="mb-5 text-[#4067a4ff] transform transition-transform duration-300 group-hover:scale-110">
                       {item.icon}
                     </div>
 
@@ -154,9 +154,9 @@ export default function About() {
       <section className="relative py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-6">
           <FadeIn>
-            <div className="mx-auto max-w-2xl border-t-4 border-[#2563EB] bg-white p-6 md:p-8 shadow-lg rounded-xl">
+            <div className="mx-auto max-w-2xl border-t-4 border-[#4067a4ff] bg-white p-6 md:p-8 shadow-lg rounded-xl">
               {/* Icon */}
-              <div className="mb-6 text-[#2563EB] flex justify-center">
+              <div className="mb-6 text-[#4067a4ff] flex justify-center">
                 <IconSecurity size={60} />
               </div>
 
@@ -171,7 +171,7 @@ export default function About() {
                   We operate with strict confidentiality as the foundation of our client Relationships.
                 </p>
 
-                <div className="w-10 h-[2px] bg-[#2563EB]/50 mx-auto" />
+                <div className="w-10 h-[2px] bg-[#4067a4ff]/50 mx-auto" />
 
                 <p className="text-[#2D333D] text-[15px] md:text-[16px] font-medium leading-relaxed">
                   Projects, Partners, and Transactions are shared only when necessary and under appropriate structures to protect the integrity of the mission and our partner's interests.

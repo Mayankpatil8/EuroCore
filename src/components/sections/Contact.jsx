@@ -13,7 +13,7 @@ export default function Contact() {
 
         {/* ── Page header ── */}
         <div className="mb-14 md:mb-20">
-          <p className="text-[11px] font-bold tracking-[0.2em] text-[#2563EB] uppercase mb-4">
+          <p className="text-[11px] font-bold tracking-[0.2em] text-[#4067a4ff] uppercase mb-4">
             Contact
           </p>
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-[#0F1113] tracking-tight leading-[1.0] mb-6">
@@ -22,7 +22,7 @@ export default function Contact() {
           <p className="max-w-3xl text-[15px] md:text-[18px] text-[#2D333D] leading-relaxed mb-8">
             If you are dealing with sourcing challenges, supply constraints or entering new markets, we can help.
           </p>
-          <div className="w-14 h-[3px] bg-[#2563EB]" />
+          <div className="w-14 h-[3px] bg-[#4067a4ff]" />
         </div>
 
         {/* ── Two-column layout — FORM LEFT, INFO RIGHT ── */}
@@ -48,8 +48,8 @@ export default function Contact() {
               {submitted ? (
                 /* ── Success state ── */
                 <div className="relative z-10 flex flex-col items-start justify-center min-h-[520px]">
-                  <div className="w-14 h-14 border-2 border-[#2563EB] bg-[#2563EB]/10 flex items-center justify-center mb-8">
-                    <svg className="w-6 h-6 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                  <div className="w-14 h-14 border-2 border-[#4067a4ff] bg-[#4067a4ff]/10 flex items-center justify-center mb-8">
+                    <svg className="w-6 h-6 text-[#4067a4ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -95,11 +95,11 @@ export default function Contact() {
                         value={form.message}
                         onChange={handle}
                         placeholder="Message"
-                        className="peer w-full bg-transparent border-b border-white/15 text-white text-base py-2 focus:border-[#2563EB] focus:outline-none placeholder-transparent resize-none leading-relaxed"
+                        className="peer w-full bg-transparent border-b border-white/15 text-white text-base py-2 focus:border-[#4067a4ff] focus:outline-none placeholder-transparent resize-none leading-relaxed"
                       />
                       <label
                         htmlFor="message"
-                        className="absolute left-0 top-0 text-[11px] font-bold tracking-[0.18em] uppercase text-[#9CA3AF] peer-placeholder-shown:top-7 peer-placeholder-shown:text-sm peer-placeholder-shown:text-white/60 peer-placeholder-shown:font-medium peer-placeholder-shown:tracking-normal peer-focus:top-0 peer-focus:text-[11px] peer-focus:text-[#2563EB] peer-focus:font-bold peer-focus:tracking-[0.18em] cursor-text"
+                        className="absolute left-0 top-0 text-[11px] font-bold tracking-[0.18em] uppercase text-[#9CA3AF] peer-placeholder-shown:top-7 peer-placeholder-shown:text-sm peer-placeholder-shown:text-white/60 peer-placeholder-shown:font-medium peer-placeholder-shown:tracking-normal peer-focus:top-0 peer-focus:text-[11px] peer-focus:text-[#4067a4ff] peer-focus:font-bold peer-focus:tracking-[0.18em] cursor-text"
                       >
                         Your message *
                       </label>
@@ -109,7 +109,7 @@ export default function Contact() {
                     <div className="pt-4">
                       <button
                         type="submit"
-                        className="w-full bg-[#4067a4ff] text-white text-sm font-bold tracking-[0.14em] uppercase py-4 md:py-5 hover:bg-[#5085dcff] active:bg-[#1e40af] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/40 focus:ring-offset-2 focus:ring-offset-[#0F1113]"
+                        className="w-full bg-[#4067a4ff] text-white text-sm font-bold tracking-[0.14em] uppercase py-4 md:py-5 hover:bg-[#5085dcff] active:bg-[#1e40af] focus:outline-none focus:ring-2 focus:ring-[#4067a4ff]/40 focus:ring-offset-2 focus:ring-offset-[#0F1113]"
                       >
                         Send Message
                       </button>
@@ -153,20 +153,20 @@ export default function Contact() {
                     phone: '+358 40 8500302',
                   },
                 ].map((p, i) => (
-                  <div key={i} className="pl-5 border-l-[3px] border-[#2563EB]">
+                  <div key={i} className="pl-5 border-l-[3px] border-[#4067a4ff]">
                     <div className="font-bold text-[#0F1113] text-base leading-snug">{p.name}</div>
                     <div className="text-[12px] font-bold tracking-[0.12em] text-[#0F1113]/80 mt-0.5 mb-2">
                       {p.role}
                     </div>
                     <a
                       href={`mailto:${p.email}`}
-                      className="text-sm font-semibold text-[#2563EB] hover:text-[#1d4ed8] underline underline-offset-4 decoration-[#2563EB]/30"
+                      className="text-sm font-semibold text-[#4067a4ff] hover:text-[#1d4ed8] underline underline-offset-4 decoration-[#4067a4ff]/30"
                     >
                       {p.email}
                     </a>
                     <a
                       href={`tel:${p.phone.replace(/\s+/g, '')}`}
-                      className="block mt-2 text-sm font-semibold text-[#0F1113] hover:text-[#2563EB]"
+                      className="block mt-2 text-sm font-semibold text-[#0F1113] hover:text-[#4067a4ff]"
                     >
                       {p.phone}
                     </a>
@@ -197,11 +197,11 @@ function FloatingField({ id, name, label, type = 'text', required = false, value
         value={value}
         onChange={onChange}
         placeholder={label}
-        className="peer w-full bg-transparent min-w-0 border-b border-white/15 text-white text-base py-2 focus:border-[#2563EB] focus:outline-none placeholder-transparent"
+        className="peer w-full bg-transparent min-w-0 border-b border-white/15 text-white text-base py-2 focus:border-[#4067a4ff] focus:outline-none placeholder-transparent"
       />
       <label
         htmlFor={id}
-        className="absolute left-0 top-0 text-[11px] font-bold tracking-[0.18em] uppercase text-[#9CA3AF] peer-placeholder-shown:top-7 peer-placeholder-shown:text-sm peer-placeholder-shown:text-white/60 peer-placeholder-shown:font-medium peer-placeholder-shown:tracking-normal peer-focus:top-0 peer-focus:text-[11px] peer-focus:text-[#2563EB] peer-focus:font-bold peer-focus:tracking-[0.18em] cursor-text"
+        className="absolute left-0 top-0 text-[11px] font-bold tracking-[0.18em] uppercase text-[#9CA3AF] peer-placeholder-shown:top-7 peer-placeholder-shown:text-sm peer-placeholder-shown:text-white/60 peer-placeholder-shown:font-medium peer-placeholder-shown:tracking-normal peer-focus:top-0 peer-focus:text-[11px] peer-focus:text-[#4067a4ff] peer-focus:font-bold peer-focus:tracking-[0.18em] cursor-text"
       >
         {label}{required ? ' *' : ''}
       </label>
