@@ -120,24 +120,15 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* ── RIGHT (col 8–12): info panel ── */}
+          {/* ── DIRECT CONTACT (Mobile FIRST) ── */}
           <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col gap-10 lg:pt-2">
-            <div>
-              <p className="text-[11px] font-black tracking-[0.2em] text-[#0F1113]/70 uppercase mb-4">
-                How it starts
-              </p>
-              <ul className="space-y-3 text-[15px] text-[#2D333D] font-medium leading-relaxed">
-                <li>Send a short description of your situation.</li>
-                <li>We respond quickly and define the next steps.</li>
-                <li>Use the contact form box to share your requirement.</li>
-              </ul>
-            </div>
 
             {/* Direct Contacts */}
-            <div>
+            <div className="order-1 lg:order-2">
               <p className="text-[11px] font-black tracking-[0.2em] text-[#0F1113]/70 uppercase mb-6">
                 Direct Contact
               </p>
+
               <div className="flex flex-col gap-7">
                 {[
                   {
@@ -154,31 +145,39 @@ export default function Contact() {
                   },
                 ].map((p, i) => (
                   <div key={i} className="pl-5 border-l-[3px] border-[#4067a4ff]">
-                    <div className="font-bold text-[#0F1113] text-base leading-snug">{p.name}</div>
+                    <div className="font-bold text-[#0F1113] text-base">{p.name}</div>
                     <div className="text-[12px] font-bold tracking-[0.12em] text-[#0F1113]/80 mt-0.5 mb-2">
                       {p.role}
                     </div>
-                    <a
-                      href={`mailto:${p.email}`}
-                      className="text-sm font-semibold text-[#4067a4ff] hover:text-[#1d4ed8] underline underline-offset-4 decoration-[#4067a4ff]/30"
-                    >
+                    <a href={`mailto:${p.email}`} className="text-sm font-semibold text-[#4067a4ff]">
                       {p.email}
                     </a>
-                    <a
-                      href={`tel:${p.phone.replace(/\s+/g, '')}`}
-                      className="block mt-2 text-sm font-semibold text-[#0F1113] hover:text-[#4067a4ff]"
-                    >
+                    <a href={`tel:${p.phone.replace(/\s+/g, '')}`} className="block mt-2 text-sm font-semibold">
                       {p.phone}
                     </a>
                   </div>
                 ))}
               </div>
+
               <p className="text-[14px] font-bold text-[#0F1113] mt-8">
                 Located in Helsinki, Finland
               </p>
             </div>
-          </div>
 
+            {/* HOW IT STARTS */}
+            <div className="order-2 lg:order-1">
+              <p className="text-[11px] font-black tracking-[0.2em] text-[#0F1113]/70 uppercase mb-4">
+                How it starts
+              </p>
+
+              <ul className="space-y-3 text-[15px] text-[#2D333D] font-medium leading-relaxed">
+                <li>Send a short description of your situation.</li>
+                <li>We respond quickly and define the next steps.</li>
+                <li>Use the contact form box to share your requirement.</li>
+              </ul>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
