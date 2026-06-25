@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 
 export default function Contact() {
@@ -5,7 +6,43 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handle = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
-  const submit = (e) => { e.preventDefault(); setSubmitted(true); };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const formData = {
+    firstName: e.target.firstName.value,
+    lastName: e.target.lastName.value,
+    email: e.target.email.value,
+    phone: e.target.phone.value,
+    message: e.target.message.value,
+  };
+
+  console.log("Submitting:", formData);
+
+  try {
+    const res = await fetch("/send-mail.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    console.log("SERVER RESPONSE:", data);
+
+    if (data.success) {
+      setSubmitted(true);
+    } else {
+      alert("Email failed");
+    }
+
+  } catch (error) {
+    console.error("ERROR:", error);
+    alert("Failed to send message");
+  }
+};
 
   return (
     <div className="bg-[#F7F7F6] pt-28 md:pt-36 pb-20 md:pb-28">
@@ -63,7 +100,7 @@ export default function Contact() {
 
               ) : (
                 /* ── Contact form ── */
-                <form onSubmit={submit} noValidate className="relative z-10">
+                <form onSubmit={handleSubmit} noValidate className="relative z-10">
 
                   <div className="mb-10 md:mb-12">
                     <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-2">
@@ -139,7 +176,7 @@ export default function Contact() {
                   },
                   {
                     name: 'Ajay Chaudhari',
-                    role: 'Co-Founder & Head of Global Sourcing',
+                    role: 'Co-Founder',
                     email: 'sales@eurocoreglobal.com',
                     phone: '+358 40 8500302',
                   },

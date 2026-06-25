@@ -3,16 +3,14 @@ import { useEffect, useRef } from 'react';
 
 // Words to cycle through in the vertical ticker
 const WORDS = [
-  '• SOURCING ',
-  '• MARKET ACCESS ',
-  '• PROCUREMENT ',
+  '• CAPABILITIES ',
+  '• PARTNERSHIPS ',
+  '• MARKETS ',
   '• EXECUTION ',
-  '• GLOBAL SUPPLY ',
-  '• STRATEGIC ',
-  '• MARKET ACCESS ',
-  '• SOURCING ',
+  '• CAPABILITIES ',
+  '• PARTNERSHIPS ',
+  '• MARKETS ',
   '• EXECUTION ',
-  '• PROCUREMENT ',
 ];
 
 function VerticalTicker() {
@@ -166,9 +164,9 @@ export default function ExecutionFocus() {
               maxWidth: '270px',
             }}
           >
-            Eurocore Global delivers on-the-ground support to ensure seamless
-            international procurement. We don't just advise; we execute supply
-            chain solutions that drive real business outcomes.
+            Many advisory firms stop at strategy.
+            At Eurocore, we believe opportunities only create value when they can be successfully executed.
+            From capability discovery and partner engagement to market access and implementation, we support organizations throughout the entire process, focusing on practical outcomes rather than recommendations that remain on paper.
           </p>
         </FadeIn>
       </div>

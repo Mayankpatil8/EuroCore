@@ -10,26 +10,19 @@ export default function Hero() {
 
         <div className="flex flex-col items-center text-center px-6">
           <FadeIn>
-            <h1 className="text-5xl md:text-[64px] lg:text-[72px] font-bold text-[#0F1113] leading-[1.08] tracking-tight mb-8">
-              Turning sourcing<br />
-              into secured supply.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F1113] leading-[1.1] tracking-tight mb-8">
+              Connecting Capabilities,<br /> Partnerships and Markets.
             </h1>
             <div className="w-10 h-[1.5px] bg-[#0F1113]/20 mx-auto mb-10"></div>
 
-            <div className="max-w-[620px] mx-auto text-center space-y-5 mb-10">
+            <div className="max-w-[800px] mx-auto text-center space-y-5 mb-10">
 
               <p className="text-[17px] text-[#6B7280] leading-[1.7] font-medium">
-                Eurocore Global is a sourcing and procurement partner operating across
-                international markets and complex supply environments.
+                Eurocore Global helps organizations identify capabilities, build strategic partnerships, access new markets, and develop resilient supply chains across Europe and selected international markets. We support companies operating in complex industries where finding the right supplier, manufacturing partner, technology provider, customer, or market opportunity can be challenging.
               </p>
 
               <p className="text-[17px] text-[#6B7280] leading-[1.7]">
-                We connect demand with reliable supply, managing the full process from
-                supplier identification to final delivery.
-              </p>
-
-              <p className="text-[17px] text-[#6B7280] leading-[1.7]">
-                Our focus is to ensure sourcing leads to real, executable outcomes.
+                Our focus is simple: helping organizations find the right capabilities, build the right partnerships, and turn opportunities into execution.
               </p>
 
             </div>
