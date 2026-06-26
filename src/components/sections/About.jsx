@@ -14,9 +14,17 @@ export default function About() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-primary leading-[1.1] mb-8">
                   The Foundation of<br />Reliable Execution
                 </h2>
-                <p className="text-[#6B7280] text-base md:text-[17px] leading-relaxed max-w-full sm:max-w-[460px]">
-                  Eurocore Global was established to bridge the gap between procurement strategy and real-world execution. In an increasingly fragmented global market, we serve as the critical link for clients navigating complex supply chains and seeking access to mature and emerging markets with confidence and precision.
-                </p>
+                <div className="text-[#6B7280] text-base md:text-[17px] leading-relaxed max-w-full sm:max-w-[600px] space-y-5">
+                  <p>
+                    Eurocore Global was established to support organizations operating in complex international environments where decisions often depend on access to the right information, capabilities, partners, and local market insight.
+                  </p>
+                  <p>
+                    We believe that successful outcomes are built on a combination of preparation, validation, and execution. Whether entering a new market, evaluating potential partners, or exploring new supply and manufacturing options, organizations need more than assumptions. They need confidence in the decisions they make.
+                  </p>
+                  <p>
+                    Our role is to help clients navigate uncertainty, evaluate opportunities, and move forward with clarity.
+                  </p>
+                </div>
               </FadeIn>
             </div>
 
@@ -52,9 +60,10 @@ export default function About() {
                 <span className="mb-6 opacity-80 text-primary">
                   <IconBuilding />
                 </span>
-                <h3 className="text-xl md:text-[22px] font-bold text-primary mb-4">Unwavering Trust</h3>
+                <h3 className="text-xl md:text-[22px] font-bold text-primary mb-4">Strategic Curiosity
+</h3>
                 <p className="text-base text-[#6B7280] leading-relaxed max-w-[320px]">
-                  We build long-term international partnerships through transparent operations and consistent reliability in procurement.
+We believe better decisions begin with better understanding. We continuously explore markets, industries, technologies, and capabilities to identify opportunities others may overlook.
                 </p>
               </div>
             </FadeIn>
@@ -64,9 +73,9 @@ export default function About() {
                 <span className="mb-6 opacity-80 text-primary">
                   <IconPersonDesk />
                 </span>
-                <h3 className="text-xl md:text-[22px] font-bold text-primary mb-4">Quiet Confidence</h3>
+                <h3 className="text-xl md:text-[22px] font-bold text-primary mb-4">Relationship Focused</h3>
                 <p className="text-base text-[#6B7280] leading-relaxed max-w-[320px]">
-                  Our expertise allows us to navigate complex global markets with a calm, execution-focused approach that ensures results.
+Sustainable growth is built on trust. We invest in long-term relationships with partners, suppliers, customers, and stakeholders across international markets.
                 </p>
               </div>
             </FadeIn>
@@ -76,9 +85,9 @@ export default function About() {
                 <span className="mb-6 opacity-80 text-primary">
                   <IconGlobe />
                 </span>
-                <h3 className="text-xl md:text-[22px] font-bold text-primary mb-4">Execution Mastery</h3>
+                <h3 className="text-xl md:text-[22px] font-bold text-primary mb-4">Execution Oriented</h3>
                 <p className="text-base text-[#6B7280] leading-relaxed max-w-[320px]">
-                  We prioritize the art of delivery, maintaining understated professionalism while securing the vital supply chains our clients legacy depends on.
+Ideas only create value when they are implemented. We focus on outcomes rather than activity, supporting clients from initial opportunity identification through to implementation.
                 </p>
               </div>
             </FadeIn>
@@ -102,23 +111,23 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {[
               {
-                title: "Access to trusted suppliers",
-                desc: "Leveraging a global network of proven partners to ensure reliability and quality in every transaction.",
+                title: "Access to Opportunities",
+                desc: "Connecting organizations with partners, capabilities, customers, suppliers, and markets that support strategic growth.",
                 icon: <IconSuppliers />
               },
               {
-                title: "Speed when it matters",
-                desc: "Acting with precision and urgency when supply constraints or shifting markets require rapid response.",
+                title: "Capability Visibility",
+                desc: "Helping clients identify who can build, supply, manufacture, or support the solutions they require.",
                 icon: <IconSpeed />
               },
               {
-                title: "Global market mobility",
-                desc: "The ability to operate across diverse markets and jurisdictions with full legal and operational compliance.",
+                title: "Market Intelligence",
+                desc: "Providing practical insight into industries, ecosystems, and stakeholder networks across international markets.",
                 icon: <IconMarkets />
               },
               {
-                title: "End-to-end ownership",
-                desc: "True accountability from the initial sourcing request to final delivery on the ground.",
+                title: "From Strategy to Execution",
+                desc: "Supporting implementation through partner engagement, business development, and practical execution support.",
                 icon: <IconOwnership />
               }
             ].map((item, idx) => (
@@ -151,37 +160,10 @@ export default function About() {
       </section>
 
       {/* Fourth Section: Trust & Confidentiality */}
-      <section className="relative py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <FadeIn>
-            <div className="mx-auto max-w-2xl border-t-4 border-[#4067a4ff] bg-white p-6 md:p-8 shadow-lg rounded-xl">
-              {/* Icon */}
-              <div className="mb-6 text-[#4067a4ff] flex justify-center">
-                <IconSecurity size={60} />
-              </div>
-
-              {/* Heading */}
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#0F1113] tracking-tight mb-6 flex justify-center">
-                Trust and Confidentiality
-              </h2>
-
-              {/* Content */}
-              <div className="space-y-4 max-w-xl ">
-                <p className="text-[#0F1113] text-lg font-semibold leading-relaxed">
-                  We operate with strict confidentiality as the foundation of our client Relationships.
-                </p>
-
-                <div className="w-10 h-[2px] bg-[#4067a4ff]/50 mx-auto" />
-
-                <p className="text-[#2D333D] text-[15px] md:text-[16px] font-medium leading-relaxed">
-                  Projects, Partners, and Transactions are shared only when necessary and under appropriate structures to protect the integrity of the mission and our partner's interests.
-                </p>
-              </div>
-
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      
+      <br></br>
+      
+      <br></br>
     </div>
   );
 }

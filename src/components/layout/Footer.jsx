@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="font-bold text-lg mb-2">Eurocore Global</div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Turning sourcing into secured supply. Operating across international markets and complex supply environments.
+Helping organizations find the right capabilities, build the right partnerships, and access the right markets.
             </p>
           </div>
 
@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <div className="text-xs font-semibold tracking-widest text-white/40 uppercase mb-4">Navigation</div>
             <nav className="flex flex-col gap-2">
-              {[['/', 'Home'], ['/about', 'About'], ['/services', 'Services'], ['/approach', 'Approach'], ['/contact', 'Contact']].map(([path, label]) => (
+              {[['/', 'Home'], ['/about', 'About'], ['/services', 'Services'], ['/approach', 'Approach'], ['/critical-industries', 'Critical Industries'], ['/contact', 'Contact']].map(([path, label]) => (
                 <Link key={path} to={path} className="text-sm text-white/60 hover:text-white transition-colors">
                   {label}
                 </Link>

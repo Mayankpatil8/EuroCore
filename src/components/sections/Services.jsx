@@ -1,30 +1,27 @@
 import { FadeIn } from '../ui/FadeIn';
+import { Link } from 'react-router-dom';
 import robotImg from '../../assets/service-robots.jpg';
 
 const SERVICES = [
   {
-    title: 'International Sourcing',
-    desc: 'Strategic identification and qualification of global suppliers to ensure high-quality production and cost-efficiency in complex international markets.',
+    title: 'Business Development & Market Access',
+    desc: 'Supporting international growth through partner identification, market entry strategies, commercial introductions, and business development activities across Europe and selected global markets.',
   },
   {
-    title: 'Execution Management',
-    desc: 'Direct oversight of procurement logistics and supply chain workflows, transforming strategic planning into tangible results through hands-on local management.',
+    title: 'Strategic Sourcing & Supplier Discovery',
+    desc: 'Identification, qualification, and engagement of suppliers, manufacturers, and technology partners to secure resilient, cost-effective, and high-quality supply chains.',
   },
   {
-    title: 'Market Entry Solutions',
-    desc: 'Navigating regulatory landscapes and infrastructure challenges to establish reliable supply routes and secure market presence in emerging economies.',
+    title: 'Capability Discovery',
+    desc: 'Helping organizations identify companies with the right manufacturing, technical, industrial, or commercial capabilities to support strategic projects, sourcing initiatives, and market expansion.',
   },
   {
-    title: 'Risk Mitigation',
-    desc: 'Comprehensive quality control and supply chain auditing protocols to safeguard operations against international procurement volatility.',
+    title: 'Supply Chain Execution & Local Representation',
+    desc: 'Hands-on management of sourcing projects, supplier coordination, negotiations, logistics, and local stakeholder engagement to ensure successful execution.',
   },
   {
-    title: 'European Sourcing',
-    desc: 'Leveraging established supplier relationships across European manufacturing hubs to deliver compliant, high-standard procurement outcomes.',
-  },
-  {
-    title: 'Advisory & Commercial',
-    desc: 'Structured commercial guidance on supplier negotiations, contract terms, and procurement strategy alignment with business objectives.',
+    title: 'Commercial Advisory & Partnership Development',
+    desc: 'Providing support in negotiations, partnership development, procurement structures, commercial strategy, and international business growth initiatives.',
   }
 ];
 
@@ -70,7 +67,19 @@ export default function Services() {
 
         </div>
 
-        {/* Image Section */}
+        {/* CTA Button */}
+        <FadeIn delay={400}>
+          <div className="mt-12 sm:mt-16 md:mt-20 flex justify-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-[#426db3ff] text-[#F7F7F6] px-10 py-4 text-[15px] font-bold tracking-wide hover:bg-[#5085dcff] transition-colors rounded-[2px]"
+            >
+              Initiate Partnership
+            </Link>
+          </div>
+        </FadeIn>
+
+        {/* Image Section
         <div className="mt-12 sm:mt-16 md:mt-24 lg:mt-32 w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[700px] overflow-hidden rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
 
           <img
@@ -79,7 +88,7 @@ export default function Services() {
             className="w-full h-full object-cover animate-reveal-rl origin-center transition-transform duration-[2000ms] ease-out hover:scale-[1.02]"
           />
 
-        </div>
+        </div> */}
 
       </div>
 

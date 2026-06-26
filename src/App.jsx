@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ApproachPage from './pages/ApproachPage';
+import CriticalIndustriesPage from './pages/CriticalIndustriesPage';
 import ContactPage from './pages/ContactPage';
 
 function ScrollToTop() {
@@ -24,6 +25,7 @@ function Layout() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/approach" element={<ApproachPage />} />
+        <Route path="/critical-industries" element={<CriticalIndustriesPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />

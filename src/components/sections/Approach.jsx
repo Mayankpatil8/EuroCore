@@ -4,27 +4,27 @@ import steelBanner from '../../assets/dark_steel.png';
 const STEPS = [
   {
     num: '01',
-    label: 'MARKET ASSESSMENT',
-    desc: 'Deep analysis of global supply chains and regulatory landscapes to identify optimal procurement routes.',
+    label: 'Opportunity Assessment',
+    desc: 'Understanding objectives, constraints, opportunities, and market dynamics to establish a clear path forward.',
   },
   {
     num: '02',
-    label: 'SOURCING EXECUTION',
-    desc: 'Direct engagement with verified international partners to secure quality supply at scale.',
+    label: 'Capability Discovery',
+    desc: 'Identifying and evaluating organizations with the technical, manufacturing, industrial, or commercial capabilities required to support the initiative.',
   },
   {
     num: '03',
-    label: 'LOGISTICS INTEGRATION',
-    desc: 'Synchronized movement of goods through optimized freight and warehousing frameworks.',
+    label: 'Partner Engagement',
+    desc: 'Establishing relationships with suppliers, manufacturers, distributors, technology partners, customers, and other key stakeholders.',
   },
   {
     num: '04',
-    label: 'MARKET ENTRY',
-    desc: 'Final delivery and successful implementation within the target market environment.',
+    label: 'Execution & Growth',
+    desc: 'Supporting implementation, market access activities, commercial development, and long-term execution to transform opportunities into results.',
   },
 ];
 
-const WORDS = ['PROCESS', 'SUPPLY CHAIN SECURITY', 'STRATEGIC SOURCING', 'GLOBAL PROCUREMENT', 'MARKET ACCESS'];
+const WORDS = ['DISCOVERY ', 'VALIDATION ', 'PARTNERSHIPS ', 'EXECUTION'];
 
 export default function Approach() {
   return (
@@ -92,11 +92,12 @@ export default function Approach() {
         <div className="relative z-10 w-full px-6 max-w-container mx-auto flex flex-col items-center text-center">
           <FadeIn>
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-[68px] font-black text-[#F7F7F6] tracking-tighter leading-[1.1] mb-8 drop-shadow-2xl">
-              Precision in Every Strategic Step
+              Turning Insight Into Action
+
             </h2>
             <p className="text-sm sm:text-base md:text-[18px] text-[#F7F7F6] font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-xl opacity-90">
-              Navigating the complexities of global procurement requires an execution-focused partner. We move with calm confidence to secure your supply chain and access new markets with unmatched reliability.
-            </p>
+Successful growth depends on more than identifying opportunities. It requires the ability to validate capabilities, engage the right partners, navigate market realities, and execute with confidence.</p>
+<p className="text-sm sm:text-base md:text-[18px] text-[#F7F7F6] font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-xl opacity-90">Eurocore supports organizations throughout this process, helping transform ideas into measurable outcomes.</p>            
 
             {/* Animated Underline */}
             <div className="mt-12 mb-10 sm:mb-14 md:mb-20" />

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import logoImg from '../../assets/logo.png';
 
 export default function Navbar() {
@@ -11,16 +11,22 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const location = useLocation();
+  const isDarkPage = location.pathname === '/critical-industries';
+
   const linkClass = ({ isActive }) =>
     `text-sm font-medium transition-colors duration-200 pb-0.5 ${isActive
-      ? 'text-primary border-b border-primary'
-      : 'text-primary hover:text-accent'
+      ? (isDarkPage ? 'text-white border-b border-white' : 'text-primary border-b border-primary')
+      : (isDarkPage ? 'text-gray-400 hover:text-white' : 'text-primary hover:text-accent')
     }`;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-gray-light transition-shadow duration-300 ${scrolled ? 'shadow-sm' : ''
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        scrolled 
+          ? (isDarkPage ? 'bg-[#0A0A0A] shadow-sm' : 'bg-gray-light shadow-sm')
+          : (isDarkPage ? 'bg-[#000000]' : 'bg-gray-light')
+      }`}
     >
       <div className="max-w-container mx-auto px-6 md:px-10">
         <div className="flex items-center justify-between h-20 border-b border-gray-border">
@@ -29,7 +35,7 @@ export default function Navbar() {
             <img
               src={logoImg}
               alt="Eurocore Global"
-              className="w-40 h-auto object-contain"
+              className={`w-40 h-auto object-contain ${isDarkPage ? 'brightness-0 invert' : ''}`}
             />
           </Link>
 
@@ -39,11 +45,12 @@ export default function Navbar() {
             <NavLink to="/about" className={linkClass}>About</NavLink>
             <NavLink to="/services" className={linkClass}>Services</NavLink>
             <NavLink to="/approach" className={linkClass}>Approach</NavLink>
+            <NavLink to="/critical-industries" className={linkClass}>Critical Industries</NavLink>
             <NavLink to="/contact" className={linkClass}>Contact</NavLink>
           </nav>
 
           {/* Mobile menu toggle */}
-          <MobileMenu />
+          <MobileMenu isDarkPage={isDarkPage} />
         </div>
       </div>
     </header>
@@ -67,22 +74,22 @@ function GlobeLogo() {
   );
 }
 
-function MobileMenu() {
+function MobileMenu({ isDarkPage }) {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="md:hidden">
       <button onClick={() => setOpen(!open)} className="p-2">
         <div className="space-y-1.5">
-          <span className={`block h-0.5 w-6 bg-primary transition-transform ${open ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block h-0.5 w-6 bg-primary transition-opacity ${open ? 'opacity-0' : ''}`} />
-          <span className={`block h-0.5 w-6 bg-primary transition-transform ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`block h-0.5 w-6 transition-transform ${open ? 'rotate-45 translate-y-2' : ''} ${isDarkPage ? 'bg-white' : 'bg-primary'}`} />
+          <span className={`block h-0.5 w-6 transition-opacity ${open ? 'opacity-0' : ''} ${isDarkPage ? 'bg-white' : 'bg-primary'}`} />
+          <span className={`block h-0.5 w-6 transition-transform ${open ? '-rotate-45 -translate-y-2' : ''} ${isDarkPage ? 'bg-white' : 'bg-primary'}`} />
         </div>
       </button>
       {open && (
-        <div className="absolute top-20 left-0 right-0 bg-gray-light border-b border-gray-border px-6 py-6 flex flex-col gap-5">
-          {['/', '/about', '/services', '/approach', '/contact'].map((path, i) => {
-            const labels = ['Home', 'About', 'Services', 'Approach', 'Contact'];
+        <div className={`absolute top-20 left-0 right-0 border-b px-6 py-6 flex flex-col gap-5 ${isDarkPage ? 'bg-[#0A0A0A] border-white/10' : 'bg-gray-light border-gray-border'}`}>
+          {['/', '/about', '/services', '/approach', '/critical-industries', '/contact'].map((path, i) => {
+            const labels = ['Home', 'About', 'Services', 'Approach', 'Critical Industries', 'Contact'];
             return (
               <NavLink
                 key={path}
@@ -90,7 +97,9 @@ function MobileMenu() {
                 end={path === '/'}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `text-base font-medium ${isActive ? 'text-accent' : 'text-primary'}`
+                  `text-base font-medium ${isActive 
+                    ? (isDarkPage ? 'text-white' : 'text-accent') 
+                    : (isDarkPage ? 'text-gray-400' : 'text-primary')}`
                 }
               >
                 {labels[i]}
